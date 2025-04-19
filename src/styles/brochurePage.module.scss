@@ -1,4 +1,6 @@
 .page {
+  margin-left: 3rem;
+  margin-right: 3rem;
   border-radius: 1rem;
   background-color: #fff6f67c;
   display: flex;
@@ -33,11 +35,11 @@
   }
 
   /* Optional: reverse order so Picture comes first */
-  .content :nth-child(1) {
+  .content > :nth-child(1) {
     order: 2;
   }
 
-  .content :nth-child(2) {
+  .content > :nth-child(2) {
     order: 1;
   }
 }
