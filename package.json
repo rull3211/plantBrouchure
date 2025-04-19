@@ -2,12 +2,14 @@
   "name": "borchure",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://rull3211.github.io/plantBrouchure",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "install": "^0.13.0",
