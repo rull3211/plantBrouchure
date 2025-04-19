@@ -1,0 +1,39 @@
+#root {
+  text-align: center;
+}
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+main {
+  padding: 3rem;
+  background-size: cover;
+  background-image: url("./assets/pngtree-textured-abstract-beige-background-image_770439.jpg");
+}
+
+header,
+footer {
+  align-content: center;
+  color: rgb(224, 224, 15);
+  background-color: rgba(85, 107, 47, 1);
+  flex: 0 0 5%;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  overflow: auto;
+
+  gap: 1rem;
+  justify-content: center;
+  flex-direction: column;
+}

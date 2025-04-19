@@ -1,0 +1,56 @@
+.carouselWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  // Arrows hidden by default
+  .arrow {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  // Show arrows on hover
+  &:hover .arrow {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.1);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.left {
+  left: 1rem;
+}
+
+.right {
+  right: 1rem;
+}

@@ -1,0 +1,26 @@
+.detailsSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; // space between columns and rows
+
+  > .detalj {
+    display: flex;
+    flex: 1 1 45%; // grow and shrink, 45% width for 2 columns with gap
+    margin: 0;
+    text-align: start;
+    gap: 0.2rem;
+    p,
+    b {
+      max-width: fit-content;
+      flex: 1 1 45%; // grow and shrink, 45% width for 2 columns with gap
+      margin: 0;
+      text-align: start;
+    }
+  }
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 1rem;
+}
