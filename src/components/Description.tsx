@@ -9,10 +9,6 @@ interface Props {
 const Description = ({ title, description, type, detaljer }: Props) => {
   return (
     <section>
-      <section>
-        <h2>{title}</h2>
-        <p>{type}</p>
-      </section>
       <section className={styles.description}>
         {description.map((el) => (
           <p>{el}</p>

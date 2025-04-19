@@ -9,8 +9,6 @@ const Picture = ({ imageSrc, imageTitle, extraInfo }: Props) => {
   return (
     <section className={styles.pictureSection}>
       <img src={imageSrc} />
-      <h2>{imageTitle}</h2>
-      <p>{extraInfo}</p>
     </section>
   );
 };

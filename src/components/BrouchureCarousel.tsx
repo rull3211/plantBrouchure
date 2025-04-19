@@ -38,28 +38,24 @@ const BrochureCarousel = () => {
   };
 
   return (
-    <div className={styles.carouselWrapper}>
-      <div
-        className={styles.carousel}
-        style={{ transform: `translateX(-${index * 100}%)` }}
-      >
-        {plants.map((plant, i) => (
-          <div className={styles.slide} key={i}>
-            <BrochurePage plant={plant} />
-          </div>
-        ))}
+    <div className={styles.bodyWrapper}>
+      <div className={styles.buttons}>
+        <button onClick={handlePrev}>Forrige</button>
+        <button onClick={handleNext}>Neste</button>
       </div>
 
-      <button onClick={handlePrev} className={`${styles.arrow} ${styles.left}`}>
-        ←
-      </button>
-
-      <button
-        onClick={handleNext}
-        className={`${styles.arrow} ${styles.right}`}
-      >
-        →
-      </button>
+      <div className={styles.carouselWrapper}>
+        <div
+          className={styles.carousel}
+          style={{ transform: `translateX(-${index * 100}%)` }}
+        >
+          {plants.map((plant, i) => (
+            <div className={styles.slide} key={i}>
+              <BrochurePage plant={plant} />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

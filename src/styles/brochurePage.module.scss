@@ -2,6 +2,16 @@
   border-radius: 1rem;
   background-color: #fff6f67c;
   display: flex;
+  flex-direction: column;
+}
+
+.button {
+  display: flex;
+  gap: 5rem;
+}
+
+.content {
+  display: flex;
   > * {
     flex: 1 1 50%;
     box-sizing: border-box;
@@ -14,7 +24,20 @@
   }
 }
 
-.button {
-  display: flex;
-  gap: 5rem;
+@media (max-width: 1250px) {
+  .content {
+    flex-direction: column;
+  }
+  > * {
+    overflow: scroll;
+  }
+
+  /* Optional: reverse order so Picture comes first */
+  .content :nth-child(1) {
+    order: 2;
+  }
+
+  .content :nth-child(2) {
+    order: 1;
+  }
 }
