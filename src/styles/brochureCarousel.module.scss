@@ -2,12 +2,15 @@
   position: relative; /* Keep relative positioning to contain absolutely positioned buttons */
   overflow-x: hidden;
   width: 100%;
+  overflow-y: auto;
 }
 
 .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .slide {
