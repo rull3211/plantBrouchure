@@ -1,6 +1,4 @@
 .page {
-  margin-left: 3rem;
-  margin-right: 3rem;
   border-radius: 1rem;
   background-color: #fff6f67c;
   display: flex;
@@ -26,12 +24,9 @@
   }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 900px) {
   .content {
     flex-direction: column;
-  }
-  > * {
-    overflow: scroll;
   }
 
   /* Optional: reverse order so Picture comes first */
