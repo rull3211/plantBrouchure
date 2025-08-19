@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d ./dist"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.85.5",
     "install": "^0.13.0",
     "mui": "^0.0.1",
     "npm": "^11.3.0",
