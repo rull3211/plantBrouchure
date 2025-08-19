@@ -1,12 +1,10 @@
 import styles from "../styles/description.module.scss";
 interface Props {
-  title: string;
   description: string[];
-  type: string;
   detaljer: Record<string, string>;
 }
 
-const Description = ({ title, description, type, detaljer }: Props) => {
+const Description = ({ description, detaljer }: Props) => {
   return (
     <section>
       <section className={styles.description}>
