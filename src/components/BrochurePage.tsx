@@ -11,9 +11,7 @@ const BrochurePage = ({ plant }: { plant: Plant }) => {
       </section>
       <section className={styles.content}>
         <Description
-          title={plant.title}
           description={plant.description}
-          type={plant.type}
           detaljer={plant.details}
         ></Description>
         <Picture
