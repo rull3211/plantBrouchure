@@ -1,8 +1,9 @@
 .carouselWrapper {
+  display: flex;
   position: relative; /* Keep relative positioning to contain absolutely positioned buttons */
   overflow-x: hidden;
   width: 100%;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .carousel {
@@ -14,16 +15,21 @@
 }
 
 .slide {
+  overflow-y: auto;
   flex: 0 0 100%;
   width: 100%;
 }
 
 .buttons {
   display: flex;
-  gap: 3rem;
+  width: 100%;
+  justify-content: space-around;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .bodyWrapper {
+  padding: clamp(0vw, 3rem, 5%) ;
   display: flex;
   align-items: center;
   flex: 1 1 auto;
@@ -32,3 +38,4 @@
   justify-content: center;
   flex-direction: column;
 }
+
