@@ -6,6 +6,7 @@ import { usePlantCarousel } from "../hooks/usePlantCarusel";
 import { useRef } from "react";
 import { NextButton, PrevButton } from "./Button";
 import buttonStyles from "../styles/buttons.module.scss"
+import { useSwipeable } from "react-swipeable";
 
 const BrochureCarousel = () => {
   const { plants } = usePlantsFromCSV(
@@ -16,11 +17,19 @@ const BrochureCarousel = () => {
   const firstRefClone = useRef<HTMLDivElement | null>(null);
   const lastRef = useRef<HTMLDivElement | null>(null);
   const lastRefClone = useRef<HTMLDivElement | null>(null);
+  const svipeHandler = useSwipeable({
+    onSwipedLeft: () => handleNext(),
+    onSwipedRight: () => handlePrev(),
+    preventScrollOnSwipe: true,
+    trackTouch: true,
+    trackMouse: true,
+  });
   return (
     <div className={styles.bodyWrapper}>
       <div className={styles.carouselWrapper}>
         <div
           className={styles.carousel}
+          {...svipeHandler}
           style={{
             transform: `translateX(-${position * 100}%)`,
             transition: isTransitioning
