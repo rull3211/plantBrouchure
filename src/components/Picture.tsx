@@ -5,7 +5,7 @@ interface Props {
   extraInfo?: string;
 }
 
-const Picture = ({ imageSrc, imageTitle, extraInfo }: Props) => {
+const Picture = ({ imageSrc}: Props) => {
   return (
     <section className={styles.pictureSection}>
       <img src={imageSrc} />
