@@ -30,3 +30,8 @@
   flex-direction: column;
 }
 
+@media screen and (orientation: landscape) and (max-height: 600px) {
+  .bodyWrapper {
+    padding: 2vh 2vw 2vh 2vw;
+ }
+}
