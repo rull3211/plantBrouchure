@@ -4,6 +4,8 @@ import BrochurePage from "./BrochurePage";
 import { usePlantsFromCSV } from "../hooks/usePlantsFromCSV";
 import { usePlantCarousel } from "../hooks/usePlantCarusel";
 import { useRef } from "react";
+import { NextButton, PrevButton } from "./Button";
+import buttonStyles from "../styles/buttons.module.scss"
 
 const BrochureCarousel = () => {
   const { plants } = usePlantsFromCSV(
@@ -16,11 +18,6 @@ const BrochureCarousel = () => {
   const lastRefClone = useRef<HTMLDivElement | null>(null);
   return (
     <div className={styles.bodyWrapper}>
-      <div className={styles.buttons}>
-        <button onClick={handlePrev}>Forrige</button>
-        <button onClick={handleNext}>Neste</button>
-      </div>
-
       <div className={styles.carouselWrapper}>
         <div
           className={styles.carousel}
@@ -59,6 +56,12 @@ const BrochureCarousel = () => {
             <BrochurePage plant={plants[0]} />
           </div>
         </div>
+      </div>
+      <div className={buttonStyles.emblaControls}>
+        <div className={buttonStyles.emblaButtons}>
+          <NextButton onClick={handlePrev}/>
+          <PrevButton onClick={handleNext}/>
+       </div>
       </div>
     </div>
   );
